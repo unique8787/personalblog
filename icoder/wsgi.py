@@ -1,5 +1,5 @@
 """
-WSGI config for personalblog project.
+WSGI config for icoder project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

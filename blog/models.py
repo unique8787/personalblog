@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# पर्सनल ब्लगको पोस्टका लागि
+# for personal blog post
 class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
@@ -11,7 +11,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-# ब्लगमा आउने कमेन्टका लागि
+# for comments on blog posts
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
